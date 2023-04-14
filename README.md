@@ -15,7 +15,7 @@ If pre-emptive conditions are not met, please naviagate https://docs.celestia.or
 Now let's install grafana & prometheus to graphically monitor the nodes.
 
 ---------------------------------------------
-### Install Grafana
+### Install Grafana   
 
 Install and run node_exporter on the node
 
