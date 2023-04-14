@@ -16,7 +16,7 @@ Now let's install grafana & prometheus to graphically monitor the nodes.
 
 ---------------------------------------------
 ### Install Grafana    
-
+   
 Install and run node_exporter on the node
 
 ```
