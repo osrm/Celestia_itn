@@ -3,7 +3,7 @@ This repository is created for celestia itn task(https://docs.celestia.org/nodes
 ------------------------------------------------------
 Create toolings for the Celestia Network
 ===================
-Create node monitoring tools that can be easily deployed using grafana as one of the useful tools to be used in celestia network.
+Create node monitoring tools that can be easily deployed using grafana and prometheus as one of the useful tools to be used in celestia network.
 
 ### Pre-emptive conditions
 - Installed Celestia light-node 
