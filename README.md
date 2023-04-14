@@ -3,7 +3,12 @@ This repository is created for celestia itn task(https://docs.celestia.org/nodes
 ------------------------------------------------------
 Create analytics tool for the Celestia Network node
 ===================
-Create node monitoring tools that can be easily deployed using grafana and prometheus as one of the useful tools to be used in celestia network.
+
+Today, many vps providers support graphical analysis tools for servers.
+
+However, it is also difficult to set alarms for certain behaviors because operators who do not use the vps provider cannot take advantage of them and cannot customize analysis tools to analyze the desired areas.
+
+Creating a node monitoring tool that can be easily deployed using grafana and promethus can be useful for monitoring nodes on Celestia network.
 
 ### Pre-emptive conditions
 - Installed Celestia light-node 
