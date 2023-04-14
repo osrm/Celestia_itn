@@ -66,3 +66,37 @@ Next, we will download and install Prometheus on the node to scrape the metrics 
 
 ----------------------
 ### Install Prometheus
+
+Download the Prometheus compressed package
+
+```
+wget https://github.com/prometheus/prometheus/releases/download/v2.43.0/prometheus-2.43.0.linux-amd64.tar.gz
+```
+
+Extract the binary
+
+```
+tar xvf prometheus-2.43.0.linux-amd64.tar.gz
+```
+
+Change to the directory created during extraction
+
+```
+cd prometheus-2.43.0.linux-amd64
+```
+
+Create a configuration file for Prometheus, so that it can scrape the metrics and to send them to Grafana Cloud. This configuration file has many options. For our example, it only needs three sections:
+
+ 
+
+- `global` is the section into which configurations common across all Prometheus actions are placed. In this example, we set the scrape_interval for checking and grabbing metrics from configured jobs to happen every 15 seconds.
+- `scrape_configs` is where we name our job; this name will be used in Grafana to help you find associated metrics. It is also where we configure Prometheus to find the metrics for that job.
+- `remote_write` is where we instruct Prometheus to send the scraped metrics to a secondary endpoint.
+Edit this file to include your Grafana Cloud username and the API key you created earlier.
+   
+To confirm your username and URL, first navigate to the Cloud Portal, then from the Prometheus box, click Send Metrics.
+![image](https://user-images.githubusercontent.com/90407222/232095130-9ef598a6-4577-455c-9550-ed92cae08bb4.png)
+    
+Create a Prometheus configuration file named "prometheus.yml" in the same directory as the Prometheus binary with the following content. 
+   
+ <span style="color:red"> You must replace the value </span>
