@@ -100,7 +100,7 @@ To confirm your username and URL, first navigate to the Cloud Portal, then from 
     
 Create a Prometheus configuration file named "prometheus.yml" in the same directory as the Prometheus binary with the following content.
    
-You must replace the value!
+You must replace the value.
 
 ```
 global:
