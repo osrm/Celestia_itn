@@ -161,3 +161,9 @@ Note the ID of the dashboard: 10180. We will use this ID in the next step.
 You’ll get a dashboard like this.
    
 ![image](https://user-images.githubusercontent.com/90407222/232098865-cfa2b484-f73a-443a-9916-b419c33ac7cc.png)
+   
+Now we can perform Celestia ligh-node anaysis on grafana dashboard.
+   
+If you want to set an alarm for a node, you can refer to the document. (https://grafana.com/docs/grafana/latest/alerting/)
+   
+ 
