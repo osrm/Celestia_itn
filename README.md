@@ -1,4 +1,4 @@
-This repository is created for celestia itn task.(https://docs.celestia.org/nodes/itn-toolings/). This is to build a tool to help with node operations, and light-node was used as an example.
+This repository is created for celestia itn task(https://docs.celestia.org/nodes/itn-toolings/). This is to build a tool to help with node operations, and light-node was used as an example.
 
 ------------------------------------------------------
 Create toolings for the Celestia Network
