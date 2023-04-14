@@ -2,5 +2,5 @@
 ------------------------------------------------------
 ## Create toolings for the Celestia Network
 
-#### build a Telegram bot that monitors nodes in grafana.
+#### Create node monitoring tools that can be easily deployed using grafana as one of the useful tools to be used in celestia network.
 
