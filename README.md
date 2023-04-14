@@ -123,6 +123,8 @@ remote_write:
 ```
 ./prometheus --config.file=./prometheus.yml
 ```
+   
+If you don’t want to have to start Prometheus directly from the command line every time you want it to run, you can create a systemd service for it, similar to Creating a systemd service to manage the agent. (https://grafana.com/docs/grafana-cloud/data-configuration/agent/agent_as_service/)
 
 ---------------
 ### Check that metrics are being ingested into Grafana Cloud
