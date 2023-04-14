@@ -95,8 +95,69 @@ Create a configuration file for Prometheus, so that it can scrape the metrics an
 Edit this file to include your Grafana Cloud username and the API key you created earlier.
    
 To confirm your username and URL, first navigate to the Cloud Portal, then from the Prometheus box, click Send Metrics.
+   
 ![image](https://user-images.githubusercontent.com/90407222/232095130-9ef598a6-4577-455c-9550-ed92cae08bb4.png)
     
-Create a Prometheus configuration file named "prometheus.yml" in the same directory as the Prometheus binary with the following content. 
+Create a Prometheus configuration file named "prometheus.yml" in the same directory as the Prometheus binary with the following content.
    
- <span style="color:red"> You must replace the value </span>
+You must replace the value!
+
+```
+global:
+  scrape_interval: 60s
+
+scrape_configs:
+  - job_name: node
+    static_configs:
+      - targets: ['localhost:9100']
+
+remote_write:
+  - url: '<Your Metrics instance remote_write endpoint>'
+    basic_auth:
+      username: 'your grafana username'
+      password: 'your Grafana API key'
+   ```
+   
+   Run prometheus
+   
+```
+./prometheus --config.file=./prometheus.yml
+```
+
+---------------
+### Check that metrics are being ingested into Grafana Cloud
+
+Within minutes, metrics should begin to be available in Grafana Cloud. To test this, use the Explore feature. Click Explore in the sidebar to start. This takes you to the Explore page, which looks like this.
+   
+![image](https://user-images.githubusercontent.com/90407222/232097987-8818d774-cf26-4fe2-a396-6e2596d958f2.png)
+   
+At the top of the page, use the dropdown menu to select your Prometheus data source.
+
+Use the Metrics dropdown to find the entry for node, which is the ```job_name``` we created in ```prometheus.yml```.
+   
+![image](https://user-images.githubusercontent.com/90407222/232098131-1e6176ba-14b3-40c1-8b50-088166dd39a3.png)
+   
+If node is not listed, metrics are not being collected. If metrics are listed, this confirms that metrics are being received.
+
+If metrics are not displayed after several minutes, check your steps for typos, make sure the binary is executable, and whether Prometheus is running on the Linux machine.
+
+---
+### Import a dashboard
+
+Official and community-built dashboards are listed on the Grafana website Dashboards page.(https://grafana.com/grafana/dashboards/)
+
+Dashboards on this page will include information in the Overview tab about special configurations you may need to use to get the dashboard to work. For our example, we require a dashboard that is built to display Linux Node metrics using Prometheus and node_exporter, so we chose Linux Hosts Metrics | Base.(https://grafana.com/grafana/dashboards/10180)
+   
+Note the ID of the dashboard: 10180. We will use this ID in the next step.
+
+1. In Grafana, click Dashboards in the left-side menu to go to the Dashboards page.
+
+2. Click New and select Import in the dropdown.
+
+3. Enter the ID number of the dashboard we selected.
+
+4. Click Load.
+   
+You’ll get a dashboard like this.
+   
+![image](https://user-images.githubusercontent.com/90407222/232098865-cfa2b484-f73a-443a-9916-b419c33ac7cc.png)
