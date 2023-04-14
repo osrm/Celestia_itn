@@ -166,6 +166,6 @@ You’ll get a dashboard like this.
    
 Now we can perform Celestia ligh-node anaysis on grafana dashboard.
    
-If you want to set an alarm for a node, you can refer to the document. (https://grafana.com/docs/grafana/latest/alerting/)
+If you want to set an alert for a node, you can refer to the document. (https://grafana.com/docs/grafana/latest/alerting/)
    
  
