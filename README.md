@@ -1,7 +1,7 @@
 This repository is created for celestia itn task(https://docs.celestia.org/nodes/itn-toolings/). This is to build a tool to help with node operations, and light-node was used as an example.
 
 ------------------------------------------------------
-Create toolings for the Celestia Network
+Create analytics tool for the Celestia Network node
 ===================
 Create node monitoring tools that can be easily deployed using grafana and prometheus as one of the useful tools to be used in celestia network.
 
