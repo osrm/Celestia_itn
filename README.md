@@ -18,6 +18,8 @@ If pre-emptive conditions are not met, please naviagate https://docs.celestia.or
 
 
 Now let's install grafana & prometheus to graphically monitor the nodes.
+   
+*This repository is based on (https://grafana.com/docs/grafana-cloud/quickstart/noagent_linuxnode/)
 
 ---------------------------------------------
 ### Install Grafana    
